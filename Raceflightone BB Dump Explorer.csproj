@@ -51,6 +51,11 @@
     </Compile>
     <Compile Include="RF1BBDE_Main.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RF1BBDE_Form.resx">
+      <DependentUpon>RF1BBDE_Form.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>
     <VisualStudio AllowExistingFolder="true" />

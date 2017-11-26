@@ -2959,7 +2959,7 @@
             this.lbl_craftname.Name = "lbl_craftname";
             this.lbl_craftname.Size = new System.Drawing.Size(238, 35);
             this.lbl_craftname.TabIndex = 5;
-            this.lbl_craftname.Text = "Race Flight One";
+            this.lbl_craftname.Text = "RaceFlightOne";
             this.lbl_craftname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_CpyCpb
