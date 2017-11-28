@@ -80,6 +80,19 @@ namespace RF1_BB_Dump_Explorer
             }
         }
 
+        private string GetSetting(int index, char key, string value)
+        {
+            try
+            {
+                return Array.Find(saLogs[index], x => x.Contains(value)).Split(key)[1];
+            }
+            catch (NullReferenceException)
+            {
+
+                return "Error";
+            }
+        }
+
         private void cb_LogPeriod_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
