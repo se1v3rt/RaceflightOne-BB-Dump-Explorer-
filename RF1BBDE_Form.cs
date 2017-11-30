@@ -80,16 +80,16 @@ namespace RF1_BB_Dump_Explorer
             }
         }
 
-        private string GetSetting(int index, char key, string value)
+        private string GetSetting(string needle, char separator, int period)
         {
             try
             {
-                return Array.Find(saLogs[index], x => x.Contains(value)).Split(key)[1];
+                return Array.Find(saLogs[period], x => x.Contains(needle)).Split(separator)[1];
             }
             catch (NullReferenceException)
             {
 
-                return "Error";
+                return "NODATA";
             }
         }
 
@@ -102,15 +102,15 @@ namespace RF1_BB_Dump_Explorer
                 // #vr NAME:
                 rtb_Log.Text = String.Join("", saLogs[cb_LogPeriod.SelectedIndex]);
                 // populate at a glance
-                //craft name
-                lbl_craftname.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set craft_name")).Split('=')[1];
+                //craft name .Text = GetSetting("", '=', cb_LogPeriod.SelectedIndex);
+                lbl_craftname.Text = GetSetting("set craft_name", '=', cb_LogPeriod.SelectedIndex);
                 //profiles
                 //profile 1
-                tp_profile1.Text = "Profile 1 - " + Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("pname1")).Split('=')[1];
+                tp_profile1.Text = GetSetting("pname1", '=', cb_LogPeriod.SelectedIndex);
                 //profile 2
-                tp_profile2.Text = "Profile 2 - " + Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("pname2")).Split('=')[1];
+                tp_profile2.Text = GetSetting("pname2", '=', cb_LogPeriod.SelectedIndex);
                 //profile 3
-                tp_profile3.Text = "Profile 3 - " + Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("pname3")).Split('=')[1];
+                tp_profile3.Text = GetSetting("pname3", '=', cb_LogPeriod.SelectedIndex);
                 int a = int.Parse(Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("modes active:")).Split(':')[1].Trim());
                 if ((a & 4096) == 4096)
                 {
@@ -129,144 +129,135 @@ namespace RF1_BB_Dump_Explorer
                 }
                 // pids
                 // pid  roll
-                lbl_rollp1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_kp1")).Split('=')[1];
-                lbl_rolli1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_ki1")).Split('=')[1];
-                lbl_rolld1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_kd1")).Split('=')[1];
+                lbl_rollp1.Text = GetSetting("set roll_kp1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_rolli1.Text = GetSetting("set roll_ki1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_rolld1.Text = GetSetting("set roll_kd1", '=', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_rollp2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_kp2")).Split('=')[1];
-                lbl_rolli2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_ki2")).Split('=')[1];
-                lbl_rolld2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_kd2")).Split('=')[1];
+                lbl_rollp2.Text = GetSetting("set roll_kp2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_rolli2.Text = GetSetting("set roll_ki2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_rolld2.Text = GetSetting("set roll_kd2", '=', cb_LogPeriod.SelectedIndex);
                 //p3
-                lbl_rollp3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_kp3")).Split('=')[1];
-                lbl_rolli3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_ki3")).Split('=')[1];
-                lbl_rolld3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_kd3")).Split('=')[1];
+                lbl_rollp3.Text = GetSetting("set roll_kp3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_rolli3.Text = GetSetting("set roll_ki3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_rolld3.Text = GetSetting("set roll_kd3", '=', cb_LogPeriod.SelectedIndex);
                 // pid pitch
-                lbl_pitchp1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_kp1")).Split('=')[1];
-                lbl_pitchi1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_ki1")).Split('=')[1];
-                lbl_pitchd1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_kd1")).Split('=')[1];
+                lbl_pitchp1.Text = GetSetting("set pitch_kp1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitchi1.Text = GetSetting("set pitch_ki1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitchd1.Text = GetSetting("set pitch_kd1", '=', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_pitchp2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_kp2")).Split('=')[1];
-                lbl_pitchi2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_ki2")).Split('=')[1];
-                lbl_pitchd2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_kd2")).Split('=')[1];
+                lbl_pitchp2.Text = GetSetting("set pitch_kp2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitchi2.Text = GetSetting("set pitch_ki2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitchd2.Text = GetSetting("set pitch_kd2", '=', cb_LogPeriod.SelectedIndex);
                 //p3
-                lbl_pitchp3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_kp3")).Split('=')[1];
-                lbl_pitchi3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_ki3")).Split('=')[1];
-                lbl_pitchd3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_kd3")).Split('=')[1];
+                lbl_pitchp3.Text = GetSetting("set pitch_kp3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitchi3.Text = GetSetting("set pitch_ki3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitchd3.Text = GetSetting("set pitch_kd3", '=', cb_LogPeriod.SelectedIndex);
                 // pid yaw
-                lbl_yawp1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_kp1")).Split('=')[1];
-                lbl_yawi1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_ki1")).Split('=')[1];
-                lbl_yawd1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_kd1")).Split('=')[1];
+                lbl_yawp1.Text = GetSetting("set yaw_kp1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_yawi1.Text = GetSetting("set yaw_ki1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_yawd1.Text = GetSetting("set yaw_kd1", '=', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_yawp2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_kp2")).Split('=')[1];
-                lbl_yawi2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_ki2")).Split('=')[1];
-                lbl_yawd2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_kd2")).Split('=')[1];
+                lbl_yawp2.Text = GetSetting("set yaw_kp2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_yawi2.Text = GetSetting("set yaw_ki2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_yawd2.Text = GetSetting("set yaw_kd2", '=', cb_LogPeriod.SelectedIndex);
                 //p3
-                lbl_yawp3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_kp3")).Split('=')[1];
-                lbl_yawi3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_ki3")).Split('=')[1];
-                lbl_yawd3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_kd3")).Split('=')[1];
+                lbl_yawp3.Text = GetSetting("set yaw_kp3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_yawi3.Text = GetSetting("set yaw_ki3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_yawd3.Text = GetSetting("set yaw_kd3", '=', cb_LogPeriod.SelectedIndex);
                 //filtering
                 //filter type
-                if (Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set filter_type1")).Split('=')[1] == "0")
-                    lbl_filter_type1.Text = "Filters - Type 0";
-                else
-                    lbl_filter_type1.Text = "Filters - Type 1";
+                lbl_filter_type1.Text = "Filters - " + GetSetting("set filter_type1", '=', cb_LogPeriod.SelectedIndex);
                 //p2
-                if (Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set filter_type2")).Split('=')[1] == "0")
-                    lbl_filter_type2.Text = "Filters - Type 0";
-                else
-                    lbl_filter_type2.Text = "Filters - Type 1";
+                lbl_filter_type2.Text = "Filters - " + GetSetting("set filter_type2", '=', cb_LogPeriod.SelectedIndex);
                 //p3
-                if (Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set filter_type3")).Split('=')[1] == "0")
-                    lbl_filter_type3.Text = "Filters - Type 0";
-                else
-                    lbl_filter_type3.Text = "Filters - Type 1";
+                lbl_filter_type3.Text = "Filters - " + GetSetting("set filter_type3", '=', cb_LogPeriod.SelectedIndex);
                 //filter rap
-                lbl_yaw_rap1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_rap1")).Split('=')[1];
-                lbl_roll_rap1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_rap1")).Split('=')[1];
-                lbl_pitch_rap1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_rap1")).Split('=')[1];
+                lbl_yaw_rap1.Text = GetSetting("set yaw_rap1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_rap1.Text = GetSetting("set roll_rap1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_rap1.Text = GetSetting("set pitch_rap1", '=', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_yaw_rap2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_rap2")).Split('=')[1];
-                lbl_roll_rap2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_rap2")).Split('=')[1];
-                lbl_pitch_rap2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_rap2")).Split('=')[1];
+                lbl_yaw_rap2.Text = GetSetting("set yaw_rap2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_rap2.Text = GetSetting("set roll_rap2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_rap2.Text = GetSetting("set pitch_rap2", '=', cb_LogPeriod.SelectedIndex);
                 //p3 
-                lbl_yaw_rap3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_rap3")).Split('=')[1];
-                lbl_roll_rap3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_rap3")).Split('=')[1];
-                lbl_pitch_rap3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_rap3")).Split('=')[1];
+                lbl_yaw_rap3.Text = GetSetting("set yaw_rap3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_rap3.Text = GetSetting("set roll_rap3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_rap3.Text = GetSetting("set pitch_rap3", '=', cb_LogPeriod.SelectedIndex);
                 //filter ga
-                lbl_yaw_ga1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_ga1")).Split('=')[1];
-                lbl_roll_ga1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_ga1")).Split('=')[1];
-                lbl_pitch_ga1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_ga1")).Split('=')[1];
+                lbl_yaw_ga1.Text = GetSetting("set yaw_ga1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_ga1.Text = GetSetting("set roll_ga1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_ga1.Text = GetSetting("set pitch_ga1", '=', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_yaw_ga2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_ga2")).Split('=')[1];
-                lbl_roll_ga2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_ga2")).Split('=')[1];
-                lbl_pitch_ga2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_ga2")).Split('=')[1];
+                lbl_yaw_ga2.Text = GetSetting("set yaw_ga2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_ga2.Text = GetSetting("set roll_ga2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_ga2.Text = GetSetting("set pitch_ga2", '=', cb_LogPeriod.SelectedIndex);
                 //p3
-                lbl_yaw_ga3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_ga3")).Split('=')[1];
-                lbl_roll_ga3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_ga3")).Split('=')[1];
-                lbl_pitch_ga3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_ga3")).Split('=')[1];
+                lbl_yaw_ga3.Text = GetSetting("set yaw_ga3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_ga3.Text = GetSetting("set roll_ga3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_ga3.Text = GetSetting("set pitch_ga3", '=', cb_LogPeriod.SelectedIndex);
                 //filter quick
-                lbl_yaw_quick1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_quick1")).Split('=')[1];
-                lbl_roll_quick1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_quick1")).Split('=')[1];
-                lbl_pitch_quick1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_quick1")).Split('=')[1];
+                lbl_yaw_quick1.Text = GetSetting("set yaw_quick1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_quick1.Text = GetSetting("set roll_quick1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_quick1.Text = GetSetting("set pitch_quick1", '=', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_yaw_quick2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_quick2")).Split('=')[1];
-                lbl_roll_quick2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_quick2")).Split('=')[1];
-                lbl_pitch_quick2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_quick2")).Split('=')[1];
+                lbl_yaw_quick2.Text = GetSetting("set yaw_quick2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_quick2.Text = GetSetting("set roll_quick2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_quick2.Text = GetSetting("set pitch_quick2", '=', cb_LogPeriod.SelectedIndex);
                 //p3
-                lbl_yaw_quick3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_quick3")).Split('=')[1];
-                lbl_roll_quick3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_quick3")).Split('=')[1];
-                lbl_pitch_quick3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_quick3")).Split('=')[1];
+                lbl_yaw_quick3.Text = GetSetting("set yaw_quick3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_quick3.Text = GetSetting("set roll_quick3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_quick3.Text = GetSetting("set pitch_quick3", '=', cb_LogPeriod.SelectedIndex);
                 // filter kd rap
-                lbl_yaw_kd_rap1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_kd_rap1")).Split('=')[1];
-                lbl_roll_kd_rap1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_kd_rap1")).Split('=')[1];
-                lbl_pitch_kd_rap1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_kd_rap1")).Split('=')[1];
+                lbl_yaw_kd_rap1.Text = GetSetting("set yaw_kd_rap1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_kd_rap1.Text = GetSetting("set roll_kd_rap1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_kd_rap1.Text = GetSetting("set pitch_kd_rap1", '=', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_yaw_kd_rap2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_kd_rap2")).Split('=')[1];
-                lbl_roll_kd_rap2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_kd_rap2")).Split('=')[1];
-                lbl_pitch_kd_rap2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_kd_rap2")).Split('=')[1];
+                lbl_yaw_kd_rap2.Text = GetSetting("set yaw_kd_rap2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_kd_rap2.Text = GetSetting("set roll_kd_rap2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_kd_rap2.Text = GetSetting("set pitch_kd_rap2", '=', cb_LogPeriod.SelectedIndex);
                 //p3
-                lbl_yaw_kd_rap3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_kd_rap3")).Split('=')[1];
-                lbl_roll_kd_rap3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_kd_rap3")).Split('=')[1];
-                lbl_pitch_kd_rap3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_kd_rap3")).Split('=')[1];
+                lbl_yaw_kd_rap3.Text = GetSetting("set yaw_kd_rap3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_roll_kd_rap3.Text = GetSetting("set roll_kd_rap3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_kd_rap3.Text = GetSetting("set pitch_kd_rap3", '=', cb_LogPeriod.SelectedIndex);
                 //TPA
                 //tpa kp
-                lbl_tpa_kp1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("tpakp1")).Split(' ')[1];
+                lbl_tpa_kp1.Text = GetSetting("tpakp1", ' ', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_tpa_kp2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("tpakp2")).Split(' ')[1];
+                lbl_tpa_kp2.Text = GetSetting("tpakp2", ' ', cb_LogPeriod.SelectedIndex);
                 //p3
-                lbl_tpa_kp3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("tpakp3")).Split(' ')[1];
+                lbl_tpa_kp3.Text = GetSetting("tpakp3", ' ', cb_LogPeriod.SelectedIndex);
                 //tpa ki
-                lbl_tpa_ki1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("tpaki1")).Split(' ')[1];
+                lbl_tpa_ki1.Text = GetSetting("tpaki1", ' ', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_tpa_ki2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("tpaki2")).Split(' ')[1];
+                lbl_tpa_ki2.Text = GetSetting("tpaki2", ' ', cb_LogPeriod.SelectedIndex);
                 //p3
-                lbl_tpa_ki3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("tpaki3")).Split(' ')[1];
+                lbl_tpa_ki3.Text = GetSetting("tpaki3", ' ', cb_LogPeriod.SelectedIndex);
                 //tpa kd
-                lbl_tpa_kd1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("tpakd1")).Split(' ')[1];
+                lbl_tpa_kd1.Text = GetSetting("tpakd1", ' ', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_tpa_kd2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("tpakd2")).Split(' ')[1];
+                lbl_tpa_kd2.Text = GetSetting("tpakd2", ' ', cb_LogPeriod.SelectedIndex);
                 //p3
-                lbl_tpa_kd3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("tpakd3")).Split(' ')[1];
+                lbl_tpa_kd3.Text = GetSetting("tpakd3", ' ', cb_LogPeriod.SelectedIndex);
                 //Misc
                 //misc throttle curve
-                lbl_throttle_curve1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("throttlecurve1")).Split(' ')[1];
+                lbl_throttle_curve1.Text = GetSetting("throttlecurve1", ' ', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_throttle_curve2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("throttlecurve2")).Split(' ')[1];
+                lbl_throttle_curve2.Text = GetSetting("throttlecurve2", ' ', cb_LogPeriod.SelectedIndex);
                 //p3
-                lbl_throttle_curve3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("throttlecurve3")).Split(' ')[1];
+                lbl_throttle_curve3.Text = GetSetting("throttlecurve3", ' ', cb_LogPeriod.SelectedIndex);
                 // misc Witchcraft
                 //miz wc roll
-                lbl_roll_wc1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_wc1")).Split('=')[1];
-                lbl_pitch_wc1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_wc1")).Split('=')[1];
-                lbl_yaw_wc1.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_wc1")).Split('=')[1];
+                lbl_roll_wc1.Text = GetSetting("set roll_wc1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_wc1.Text = GetSetting("set pitch_wc1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_yaw_wc1.Text = GetSetting("set yaw_wc1", '=', cb_LogPeriod.SelectedIndex);
                 //p2
-                lbl_roll_wc2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_wc2")).Split('=')[1];
-                lbl_pitch_wc2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_wc2")).Split('=')[1];
-                lbl_yaw_wc2.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_wc2")).Split('=')[1];
+                lbl_roll_wc2.Text = GetSetting("set roll_wc2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_wc2.Text = GetSetting("set pitch_wc2", '=', cb_LogPeriod.SelectedIndex);
+                lbl_yaw_wc2.Text = GetSetting("set yaw_wc2", '=', cb_LogPeriod.SelectedIndex);
                 //p3
-                lbl_roll_wc3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set roll_wc3")).Split('=')[1];
-                lbl_pitch_wc3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set pitch_wc3")).Split('=')[1];
-                lbl_yaw_wc3.Text = Array.Find(saLogs[cb_LogPeriod.SelectedIndex], x => x.Contains("set yaw_wc3")).Split('=')[1];
+                lbl_roll_wc3.Text = GetSetting("set roll_wc3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_pitch_wc3.Text = GetSetting("set pitch_wc3", '=', cb_LogPeriod.SelectedIndex);
+                lbl_yaw_wc3.Text = GetSetting("set yaw_wc3", '=', cb_LogPeriod.SelectedIndex);
             }
             catch (NullReferenceException)
             {
