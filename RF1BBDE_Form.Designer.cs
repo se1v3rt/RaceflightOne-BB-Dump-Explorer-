@@ -135,8 +135,8 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.lbl_tpa_ki2 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
-            this.lbl_tpa_kp2 = new System.Windows.Forms.Panel();
-            this.label47 = new System.Windows.Forms.Label();
+            this.Tpapanel = new System.Windows.Forms.Panel();
+            this.lbl_tpa_kp2 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
@@ -304,7 +304,7 @@
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel23.SuspendLayout();
-            this.lbl_tpa_kp2.SuspendLayout();
+            this.Tpapanel.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel26.SuspendLayout();
             this.panel27.SuspendLayout();
@@ -1404,7 +1404,7 @@
             // 
             this.panel21.Controls.Add(this.panel22);
             this.panel21.Controls.Add(this.panel23);
-            this.panel21.Controls.Add(this.lbl_tpa_kp2);
+            this.panel21.Controls.Add(this.Tpapanel);
             this.panel21.Controls.Add(this.label49);
             this.panel21.Location = new System.Drawing.Point(3, 161);
             this.panel21.Name = "panel21";
@@ -1467,24 +1467,24 @@
             this.label46.TabIndex = 0;
             this.label46.Text = "kI";
             // 
+            // Tpapanel
+            // 
+            this.Tpapanel.Controls.Add(this.lbl_tpa_kp2);
+            this.Tpapanel.Controls.Add(this.label48);
+            this.Tpapanel.Location = new System.Drawing.Point(7, 23);
+            this.Tpapanel.Name = "Tpapanel";
+            this.Tpapanel.Size = new System.Drawing.Size(238, 39);
+            this.Tpapanel.TabIndex = 6;
+            // 
             // lbl_tpa_kp2
             // 
-            this.lbl_tpa_kp2.Controls.Add(this.label47);
-            this.lbl_tpa_kp2.Controls.Add(this.label48);
-            this.lbl_tpa_kp2.Location = new System.Drawing.Point(7, 23);
+            this.lbl_tpa_kp2.AutoSize = true;
+            this.lbl_tpa_kp2.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_tpa_kp2.Location = new System.Drawing.Point(11, 13);
             this.lbl_tpa_kp2.Name = "lbl_tpa_kp2";
-            this.lbl_tpa_kp2.Size = new System.Drawing.Size(238, 39);
-            this.lbl_tpa_kp2.TabIndex = 6;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label47.Location = new System.Drawing.Point(11, 13);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(136, 13);
-            this.label47.TabIndex = 1;
-            this.label47.Text = "---=---=---=---=---=---=---=---=---";
+            this.lbl_tpa_kp2.Size = new System.Drawing.Size(136, 13);
+            this.lbl_tpa_kp2.TabIndex = 1;
+            this.lbl_tpa_kp2.Text = "---=---=---=---=---=---=---=---=---";
             // 
             // label48
             // 
@@ -3029,8 +3029,8 @@
             this.panel22.PerformLayout();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
-            this.lbl_tpa_kp2.ResumeLayout(false);
-            this.lbl_tpa_kp2.PerformLayout();
+            this.Tpapanel.ResumeLayout(false);
+            this.Tpapanel.PerformLayout();
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
             this.panel26.ResumeLayout(false);
@@ -3186,8 +3186,8 @@
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Label lbl_tpa_ki2;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Panel lbl_tpa_kp2;
-        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Panel Tpapanel;
+        private System.Windows.Forms.Label lbl_tpa_kp2;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Panel panel25;
