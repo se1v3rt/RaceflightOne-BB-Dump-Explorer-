@@ -223,7 +223,7 @@ namespace RF1_BB_Dump_Explorer
                 //tpa kp
                 lbl_tpa_kp1.Text = GetSetting("tpakp1", ' ', cb_LogPeriod.SelectedIndex);
                 //p2
-                Tpapanel.Text = GetSetting("tpakp2", ' ', cb_LogPeriod.SelectedIndex);
+                lbl_tpa_kp2.Text = GetSetting("tpakp2", ' ', cb_LogPeriod.SelectedIndex);
                 //p3
                 lbl_tpa_kp3.Text = GetSetting("tpakp3", ' ', cb_LogPeriod.SelectedIndex);
                 //tpa ki
