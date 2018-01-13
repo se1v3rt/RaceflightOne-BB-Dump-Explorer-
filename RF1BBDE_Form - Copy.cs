@@ -29,12 +29,10 @@ namespace RF1_BB_Dump_Explorer
                 this.Text = sTitle;
                 Array.Resize(ref saLogs, 0);
                 cb_LogPeriod.Items.Clear();
-                var fs = new FileStream(ofd_Main.FileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                StreamReader reader = new StreamReader(fs); 
-                
+                StreamReader reader = new StreamReader(ofd_Main.FileName);
                 try
                 {
-               
+                    
                     string line;
                     int flag = -1;
                     line = reader.ReadLine();
@@ -42,7 +40,7 @@ namespace RF1_BB_Dump_Explorer
                     {
 
                         // start of new array salogs code
-                        if (line.Contains("H RF1 Dump") || line.Contains("#vr NAME:") && flag == -1)
+                        if (line.Contains("H RF1 Dump"))
                         {
                             flag = 1;
                             if (saLogs.Length <= 0)
