@@ -45,9 +45,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lbl_yaw_wc1 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.lbl_throttle_curve1 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -275,6 +272,13 @@
             this.rtb_Log = new System.Windows.Forms.RichTextBox();
             this.lbl_craftname = new System.Windows.Forms.Label();
             this.btn_CpyCpb = new System.Windows.Forms.Button();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.lbl_throttle_curve1 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.lbl_famx = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lbl_rc_smoothing1 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.tc_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tc_Profiles.SuspendLayout();
@@ -282,7 +286,6 @@
             this.pnl_Profile1.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.panel19.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -333,6 +336,7 @@
             this.panel49.SuspendLayout();
             this.panel50.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // ofd_Main
@@ -426,8 +430,11 @@
             // 
             // panel15
             // 
+            this.panel15.Controls.Add(this.lbl_rc_smoothing1);
+            this.panel15.Controls.Add(this.label32);
+            this.panel15.Controls.Add(this.lbl_famx);
+            this.panel15.Controls.Add(this.label22);
             this.panel15.Controls.Add(this.panel10);
-            this.panel15.Controls.Add(this.panel19);
             this.panel15.Controls.Add(this.label27);
             this.panel15.Location = new System.Drawing.Point(257, 207);
             this.panel15.Name = "panel15";
@@ -443,7 +450,7 @@
             this.panel10.Controls.Add(this.label10);
             this.panel10.Controls.Add(this.lbl_yaw_wc1);
             this.panel10.Controls.Add(this.label20);
-            this.panel10.Location = new System.Drawing.Point(7, 69);
+            this.panel10.Location = new System.Drawing.Point(7, 21);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(216, 57);
             this.panel10.TabIndex = 14;
@@ -520,34 +527,6 @@
             this.label20.Text = "Yaw";
             this.label20.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.lbl_throttle_curve1);
-            this.panel19.Controls.Add(this.label26);
-            this.panel19.Location = new System.Drawing.Point(7, 23);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(238, 39);
-            this.panel19.TabIndex = 5;
-            // 
-            // lbl_throttle_curve1
-            // 
-            this.lbl_throttle_curve1.AutoSize = true;
-            this.lbl_throttle_curve1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbl_throttle_curve1.Location = new System.Drawing.Point(11, 13);
-            this.lbl_throttle_curve1.Name = "lbl_throttle_curve1";
-            this.lbl_throttle_curve1.Size = new System.Drawing.Size(136, 13);
-            this.lbl_throttle_curve1.TabIndex = 1;
-            this.lbl_throttle_curve1.Text = "---=---=---=---=---=---=---=---=---";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(0, -1);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(74, 13);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Throttle Curve";
-            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -560,20 +539,21 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.panel19);
             this.panel11.Controls.Add(this.panel14);
             this.panel11.Controls.Add(this.panel13);
             this.panel11.Controls.Add(this.panel12);
             this.panel11.Controls.Add(this.label5);
             this.panel11.Location = new System.Drawing.Point(3, 161);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(248, 161);
+            this.panel11.Size = new System.Drawing.Size(248, 186);
             this.panel11.TabIndex = 8;
             // 
             // panel14
             // 
             this.panel14.Controls.Add(this.lbl_tpa_kd1);
             this.panel14.Controls.Add(this.label16);
-            this.panel14.Location = new System.Drawing.Point(7, 114);
+            this.panel14.Location = new System.Drawing.Point(7, 104);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(238, 39);
             this.panel14.TabIndex = 8;
@@ -601,7 +581,7 @@
             // 
             this.panel13.Controls.Add(this.lbl_tpa_ki1);
             this.panel13.Controls.Add(this.label14);
-            this.panel13.Location = new System.Drawing.Point(7, 69);
+            this.panel13.Location = new System.Drawing.Point(7, 64);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(238, 39);
             this.panel13.TabIndex = 7;
@@ -2973,6 +2953,76 @@
             this.btn_CpyCpb.UseVisualStyleBackColor = true;
             this.btn_CpyCpb.Click += new System.EventHandler(this.btn_CpyCpb_Click);
             // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.lbl_throttle_curve1);
+            this.panel19.Controls.Add(this.label26);
+            this.panel19.Location = new System.Drawing.Point(5, 145);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(238, 39);
+            this.panel19.TabIndex = 9;
+            // 
+            // lbl_throttle_curve1
+            // 
+            this.lbl_throttle_curve1.AutoSize = true;
+            this.lbl_throttle_curve1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_throttle_curve1.Location = new System.Drawing.Point(11, 13);
+            this.lbl_throttle_curve1.Name = "lbl_throttle_curve1";
+            this.lbl_throttle_curve1.Size = new System.Drawing.Size(136, 13);
+            this.lbl_throttle_curve1.TabIndex = 1;
+            this.lbl_throttle_curve1.Text = "---=---=---=---=---=---=---=---=---";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(0, -1);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(74, 13);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Throttle Curve";
+            // 
+            // lbl_famx
+            // 
+            this.lbl_famx.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_famx.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_famx.Location = new System.Drawing.Point(10, 97);
+            this.lbl_famx.Name = "lbl_famx";
+            this.lbl_famx.Size = new System.Drawing.Size(88, 15);
+            this.lbl_famx.TabIndex = 20;
+            this.lbl_famx.Text = "---";
+            this.lbl_famx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(7, 82);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(88, 15);
+            this.label22.TabIndex = 19;
+            this.label22.Text = "CG Adjustment";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_rc_smoothing1
+            // 
+            this.lbl_rc_smoothing1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rc_smoothing1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_rc_smoothing1.Location = new System.Drawing.Point(135, 97);
+            this.lbl_rc_smoothing1.Name = "lbl_rc_smoothing1";
+            this.lbl_rc_smoothing1.Size = new System.Drawing.Size(88, 15);
+            this.lbl_rc_smoothing1.TabIndex = 22;
+            this.lbl_rc_smoothing1.Text = "---";
+            this.lbl_rc_smoothing1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label32
+            // 
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(135, 82);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(88, 15);
+            this.label32.TabIndex = 21;
+            this.label32.Text = "RC Smoothing";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // fm_RF1BBE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2994,8 +3044,6 @@
             this.panel15.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel14.ResumeLayout(false);
@@ -3070,6 +3118,8 @@
             this.panel49.ResumeLayout(false);
             this.panel50.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3153,9 +3203,6 @@
         private System.Windows.Forms.Label lbl_tpa_kp1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Label lbl_throttle_curve1;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label21;
@@ -3323,6 +3370,13 @@
         private System.Windows.Forms.Label label154;
         private System.Windows.Forms.Label lbl_craftname;
         private System.Windows.Forms.Button btn_CpyCpb;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Label lbl_throttle_curve1;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lbl_famx;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lbl_rc_smoothing1;
+        private System.Windows.Forms.Label label32;
     }
 }
 

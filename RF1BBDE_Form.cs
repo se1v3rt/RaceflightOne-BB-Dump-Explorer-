@@ -252,14 +252,21 @@ namespace RF1_BB_Dump_Explorer
                 lbl_roll_wc1.Text = GetSetting("set roll_wc1", '=', cb_LogPeriod.SelectedIndex);
                 lbl_pitch_wc1.Text = GetSetting("set pitch_wc1", '=', cb_LogPeriod.SelectedIndex);
                 lbl_yaw_wc1.Text = GetSetting("set yaw_wc1", '=', cb_LogPeriod.SelectedIndex);
+                lbl_famx1.Text = GetSetting("set famx", '=', cb_LogPeriod.SelectedIndex);
+                lbl_rc_smoothing1.Text = GetSetting("set rc_smoothing1", '=', cb_LogPeriod.SelectedIndex);
                 //p2
                 lbl_roll_wc2.Text = GetSetting("set roll_wc2", '=', cb_LogPeriod.SelectedIndex);
                 lbl_pitch_wc2.Text = GetSetting("set pitch_wc2", '=', cb_LogPeriod.SelectedIndex);
                 lbl_yaw_wc2.Text = GetSetting("set yaw_wc2", '=', cb_LogPeriod.SelectedIndex);
+                //lbl_famx2.Text = GetSetting("set famx", '=', cb_LogPeriod.SelectedIndex);
+                //lbl_rc_smoothing2.Text = GetSetting("set rc_smoothing2", '=', cb_LogPeriod.SelectedIndex);
                 //p3
                 lbl_roll_wc3.Text = GetSetting("set roll_wc3", '=', cb_LogPeriod.SelectedIndex);
                 lbl_pitch_wc3.Text = GetSetting("set pitch_wc3", '=', cb_LogPeriod.SelectedIndex);
                 lbl_yaw_wc3.Text = GetSetting("set yaw_wc3", '=', cb_LogPeriod.SelectedIndex);
+                //lbl_famx3.Text = GetSetting("set famx", '=', cb_LogPeriod.SelectedIndex);
+                //lbl_rc_smoothing3.Text = GetSetting("set rc_smoothing3", '=', cb_LogPeriod.SelectedIndex);
+
             }
             catch (NullReferenceException)
             {
