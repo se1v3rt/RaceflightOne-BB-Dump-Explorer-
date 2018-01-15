@@ -37,6 +37,10 @@
             this.tp_profile1 = new System.Windows.Forms.TabPage();
             this.pnl_Profile1 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.lbl_rc_smoothing1 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.lbl_famx1 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
             this.lbl_pitch_wc1 = new System.Windows.Forms.Label();
@@ -47,6 +51,9 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.lbl_throttle_curve1 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.lbl_tpa_kd1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -113,6 +120,10 @@
             this.tp_profile2 = new System.Windows.Forms.TabPage();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.lbl_rc_smoothing2 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.lbl_famx2 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.lbl_pitch_wc2 = new System.Windows.Forms.Label();
@@ -121,11 +132,11 @@
             this.label28 = new System.Windows.Forms.Label();
             this.lbl_yaw_wc2 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.lbl_throttle_curve2 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.lbl_tpa_kd2 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
@@ -192,6 +203,10 @@
             this.tp_profile3 = new System.Windows.Forms.TabPage();
             this.panel34 = new System.Windows.Forms.Panel();
             this.panel35 = new System.Windows.Forms.Panel();
+            this.lbl_rc_smoothing3 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.lbl_famx3 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
             this.panel36 = new System.Windows.Forms.Panel();
             this.label94 = new System.Windows.Forms.Label();
             this.lbl_pitch_wc3 = new System.Windows.Forms.Label();
@@ -200,11 +215,11 @@
             this.label98 = new System.Windows.Forms.Label();
             this.lbl_yaw_wc3 = new System.Windows.Forms.Label();
             this.label100 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.panel38 = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
             this.lbl_throttle_curve3 = new System.Windows.Forms.Label();
             this.label102 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
-            this.panel38 = new System.Windows.Forms.Panel();
             this.panel39 = new System.Windows.Forms.Panel();
             this.lbl_tpa_kd3 = new System.Windows.Forms.Label();
             this.label105 = new System.Windows.Forms.Label();
@@ -272,13 +287,6 @@
             this.rtb_Log = new System.Windows.Forms.RichTextBox();
             this.lbl_craftname = new System.Windows.Forms.Label();
             this.btn_CpyCpb = new System.Windows.Forms.Button();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.lbl_throttle_curve1 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.lbl_famx = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.lbl_rc_smoothing1 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
             this.tc_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tc_Profiles.SuspendLayout();
@@ -287,6 +295,7 @@
             this.panel15.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel19.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -303,8 +312,8 @@
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
-            this.panel20.SuspendLayout();
             this.panel21.SuspendLayout();
+            this.panel20.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel23.SuspendLayout();
             this.Tpapanel.SuspendLayout();
@@ -321,8 +330,8 @@
             this.panel34.SuspendLayout();
             this.panel35.SuspendLayout();
             this.panel36.SuspendLayout();
-            this.panel37.SuspendLayout();
             this.panel38.SuspendLayout();
+            this.panel37.SuspendLayout();
             this.panel39.SuspendLayout();
             this.panel40.SuspendLayout();
             this.panel41.SuspendLayout();
@@ -336,7 +345,6 @@
             this.panel49.SuspendLayout();
             this.panel50.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.panel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // ofd_Main
@@ -432,7 +440,7 @@
             // 
             this.panel15.Controls.Add(this.lbl_rc_smoothing1);
             this.panel15.Controls.Add(this.label32);
-            this.panel15.Controls.Add(this.lbl_famx);
+            this.panel15.Controls.Add(this.lbl_famx1);
             this.panel15.Controls.Add(this.label22);
             this.panel15.Controls.Add(this.panel10);
             this.panel15.Controls.Add(this.label27);
@@ -440,6 +448,48 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(248, 135);
             this.panel15.TabIndex = 9;
+            // 
+            // lbl_rc_smoothing1
+            // 
+            this.lbl_rc_smoothing1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rc_smoothing1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_rc_smoothing1.Location = new System.Drawing.Point(135, 97);
+            this.lbl_rc_smoothing1.Name = "lbl_rc_smoothing1";
+            this.lbl_rc_smoothing1.Size = new System.Drawing.Size(88, 15);
+            this.lbl_rc_smoothing1.TabIndex = 22;
+            this.lbl_rc_smoothing1.Text = "---";
+            this.lbl_rc_smoothing1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label32
+            // 
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(135, 82);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(88, 15);
+            this.label32.TabIndex = 21;
+            this.label32.Text = "RC Smoothing";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_famx1
+            // 
+            this.lbl_famx1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_famx1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_famx1.Location = new System.Drawing.Point(10, 97);
+            this.lbl_famx1.Name = "lbl_famx1";
+            this.lbl_famx1.Size = new System.Drawing.Size(88, 15);
+            this.lbl_famx1.TabIndex = 20;
+            this.lbl_famx1.Text = "---";
+            this.lbl_famx1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(7, 82);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(88, 15);
+            this.label22.TabIndex = 19;
+            this.label22.Text = "CG Adjustment";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel10
             // 
@@ -548,6 +598,34 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(248, 186);
             this.panel11.TabIndex = 8;
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.lbl_throttle_curve1);
+            this.panel19.Controls.Add(this.label26);
+            this.panel19.Location = new System.Drawing.Point(5, 145);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(238, 39);
+            this.panel19.TabIndex = 9;
+            // 
+            // lbl_throttle_curve1
+            // 
+            this.lbl_throttle_curve1.AutoSize = true;
+            this.lbl_throttle_curve1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_throttle_curve1.Location = new System.Drawing.Point(11, 13);
+            this.lbl_throttle_curve1.Name = "lbl_throttle_curve1";
+            this.lbl_throttle_curve1.Size = new System.Drawing.Size(136, 13);
+            this.lbl_throttle_curve1.TabIndex = 1;
+            this.lbl_throttle_curve1.Text = "---=---=---=---=---=---=---=---=---";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(0, -1);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(74, 13);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Throttle Curve";
             // 
             // panel14
             // 
@@ -1248,13 +1326,58 @@
             // 
             // panel17
             // 
+            this.panel17.Controls.Add(this.lbl_rc_smoothing2);
+            this.panel17.Controls.Add(this.label34);
+            this.panel17.Controls.Add(this.lbl_famx2);
+            this.panel17.Controls.Add(this.label45);
             this.panel17.Controls.Add(this.panel18);
-            this.panel17.Controls.Add(this.panel20);
             this.panel17.Controls.Add(this.label39);
             this.panel17.Location = new System.Drawing.Point(257, 207);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(248, 135);
             this.panel17.TabIndex = 9;
+            // 
+            // lbl_rc_smoothing2
+            // 
+            this.lbl_rc_smoothing2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rc_smoothing2.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_rc_smoothing2.Location = new System.Drawing.Point(135, 97);
+            this.lbl_rc_smoothing2.Name = "lbl_rc_smoothing2";
+            this.lbl_rc_smoothing2.Size = new System.Drawing.Size(88, 15);
+            this.lbl_rc_smoothing2.TabIndex = 26;
+            this.lbl_rc_smoothing2.Text = "---";
+            this.lbl_rc_smoothing2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label34
+            // 
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(135, 82);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(88, 15);
+            this.label34.TabIndex = 25;
+            this.label34.Text = "RC Smoothing";
+            this.label34.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_famx2
+            // 
+            this.lbl_famx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_famx2.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_famx2.Location = new System.Drawing.Point(10, 97);
+            this.lbl_famx2.Name = "lbl_famx2";
+            this.lbl_famx2.Size = new System.Drawing.Size(88, 15);
+            this.lbl_famx2.TabIndex = 24;
+            this.lbl_famx2.Text = "---";
+            this.lbl_famx2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label45
+            // 
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(7, 82);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(88, 15);
+            this.label45.TabIndex = 23;
+            this.label45.Text = "CG Adjustment";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel18
             // 
@@ -1265,7 +1388,7 @@
             this.panel18.Controls.Add(this.label28);
             this.panel18.Controls.Add(this.lbl_yaw_wc2);
             this.panel18.Controls.Add(this.label33);
-            this.panel18.Location = new System.Drawing.Point(7, 69);
+            this.panel18.Location = new System.Drawing.Point(7, 21);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(216, 57);
             this.panel18.TabIndex = 14;
@@ -1342,14 +1465,36 @@
             this.label33.Text = "Yaw";
             this.label33.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(3, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(41, 20);
+            this.label39.TabIndex = 4;
+            this.label39.Text = "Misc";
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.panel20);
+            this.panel21.Controls.Add(this.panel22);
+            this.panel21.Controls.Add(this.panel23);
+            this.panel21.Controls.Add(this.Tpapanel);
+            this.panel21.Controls.Add(this.label49);
+            this.panel21.Location = new System.Drawing.Point(3, 161);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(248, 186);
+            this.panel21.TabIndex = 8;
+            // 
             // panel20
             // 
             this.panel20.Controls.Add(this.lbl_throttle_curve2);
             this.panel20.Controls.Add(this.label38);
-            this.panel20.Location = new System.Drawing.Point(7, 23);
+            this.panel20.Location = new System.Drawing.Point(5, 145);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(238, 39);
-            this.panel20.TabIndex = 5;
+            this.panel20.TabIndex = 9;
             // 
             // lbl_throttle_curve2
             // 
@@ -1370,32 +1515,11 @@
             this.label38.TabIndex = 0;
             this.label38.Text = "Throttle Curve";
             // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(3, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(41, 20);
-            this.label39.TabIndex = 4;
-            this.label39.Text = "Misc";
-            // 
-            // panel21
-            // 
-            this.panel21.Controls.Add(this.panel22);
-            this.panel21.Controls.Add(this.panel23);
-            this.panel21.Controls.Add(this.Tpapanel);
-            this.panel21.Controls.Add(this.label49);
-            this.panel21.Location = new System.Drawing.Point(3, 161);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(248, 161);
-            this.panel21.TabIndex = 8;
-            // 
             // panel22
             // 
             this.panel22.Controls.Add(this.lbl_tpa_kd2);
             this.panel22.Controls.Add(this.label41);
-            this.panel22.Location = new System.Drawing.Point(7, 114);
+            this.panel22.Location = new System.Drawing.Point(7, 104);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(238, 39);
             this.panel22.TabIndex = 8;
@@ -1423,7 +1547,7 @@
             // 
             this.panel23.Controls.Add(this.lbl_tpa_ki2);
             this.panel23.Controls.Add(this.label46);
-            this.panel23.Location = new System.Drawing.Point(7, 69);
+            this.panel23.Location = new System.Drawing.Point(7, 64);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(238, 39);
             this.panel23.TabIndex = 7;
@@ -2090,13 +2214,58 @@
             // 
             // panel35
             // 
+            this.panel35.Controls.Add(this.lbl_rc_smoothing3);
+            this.panel35.Controls.Add(this.label50);
+            this.panel35.Controls.Add(this.lbl_famx3);
+            this.panel35.Controls.Add(this.label52);
             this.panel35.Controls.Add(this.panel36);
-            this.panel35.Controls.Add(this.panel37);
             this.panel35.Controls.Add(this.label103);
             this.panel35.Location = new System.Drawing.Point(257, 207);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(248, 135);
             this.panel35.TabIndex = 9;
+            // 
+            // lbl_rc_smoothing3
+            // 
+            this.lbl_rc_smoothing3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rc_smoothing3.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_rc_smoothing3.Location = new System.Drawing.Point(135, 97);
+            this.lbl_rc_smoothing3.Name = "lbl_rc_smoothing3";
+            this.lbl_rc_smoothing3.Size = new System.Drawing.Size(88, 15);
+            this.lbl_rc_smoothing3.TabIndex = 26;
+            this.lbl_rc_smoothing3.Text = "---";
+            this.lbl_rc_smoothing3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label50
+            // 
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(135, 82);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(88, 15);
+            this.label50.TabIndex = 25;
+            this.label50.Text = "RC Smoothing";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lbl_famx3
+            // 
+            this.lbl_famx3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_famx3.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_famx3.Location = new System.Drawing.Point(10, 97);
+            this.lbl_famx3.Name = "lbl_famx3";
+            this.lbl_famx3.Size = new System.Drawing.Size(88, 15);
+            this.lbl_famx3.TabIndex = 24;
+            this.lbl_famx3.Text = "---";
+            this.lbl_famx3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label52
+            // 
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(7, 82);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(88, 15);
+            this.label52.TabIndex = 23;
+            this.label52.Text = "CG Adjustment";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel36
             // 
@@ -2107,7 +2276,7 @@
             this.panel36.Controls.Add(this.label98);
             this.panel36.Controls.Add(this.lbl_yaw_wc3);
             this.panel36.Controls.Add(this.label100);
-            this.panel36.Location = new System.Drawing.Point(7, 69);
+            this.panel36.Location = new System.Drawing.Point(7, 21);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(216, 57);
             this.panel36.TabIndex = 14;
@@ -2184,14 +2353,36 @@
             this.label100.Text = "Yaw";
             this.label100.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.Location = new System.Drawing.Point(3, 0);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(41, 20);
+            this.label103.TabIndex = 4;
+            this.label103.Text = "Misc";
+            // 
+            // panel38
+            // 
+            this.panel38.Controls.Add(this.panel37);
+            this.panel38.Controls.Add(this.panel39);
+            this.panel38.Controls.Add(this.panel40);
+            this.panel38.Controls.Add(this.panel41);
+            this.panel38.Controls.Add(this.label110);
+            this.panel38.Location = new System.Drawing.Point(3, 161);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(248, 186);
+            this.panel38.TabIndex = 8;
+            // 
             // panel37
             // 
             this.panel37.Controls.Add(this.lbl_throttle_curve3);
             this.panel37.Controls.Add(this.label102);
-            this.panel37.Location = new System.Drawing.Point(7, 23);
+            this.panel37.Location = new System.Drawing.Point(5, 145);
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(238, 39);
-            this.panel37.TabIndex = 5;
+            this.panel37.TabIndex = 9;
             // 
             // lbl_throttle_curve3
             // 
@@ -2212,32 +2403,11 @@
             this.label102.TabIndex = 0;
             this.label102.Text = "Throttle Curve";
             // 
-            // label103
-            // 
-            this.label103.AutoSize = true;
-            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label103.Location = new System.Drawing.Point(3, 0);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(41, 20);
-            this.label103.TabIndex = 4;
-            this.label103.Text = "Misc";
-            // 
-            // panel38
-            // 
-            this.panel38.Controls.Add(this.panel39);
-            this.panel38.Controls.Add(this.panel40);
-            this.panel38.Controls.Add(this.panel41);
-            this.panel38.Controls.Add(this.label110);
-            this.panel38.Location = new System.Drawing.Point(3, 161);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(248, 161);
-            this.panel38.TabIndex = 8;
-            // 
             // panel39
             // 
             this.panel39.Controls.Add(this.lbl_tpa_kd3);
             this.panel39.Controls.Add(this.label105);
-            this.panel39.Location = new System.Drawing.Point(7, 114);
+            this.panel39.Location = new System.Drawing.Point(7, 104);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(238, 39);
             this.panel39.TabIndex = 8;
@@ -2265,7 +2435,7 @@
             // 
             this.panel40.Controls.Add(this.lbl_tpa_ki3);
             this.panel40.Controls.Add(this.label107);
-            this.panel40.Location = new System.Drawing.Point(7, 69);
+            this.panel40.Location = new System.Drawing.Point(7, 64);
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(238, 39);
             this.panel40.TabIndex = 7;
@@ -2953,76 +3123,6 @@
             this.btn_CpyCpb.UseVisualStyleBackColor = true;
             this.btn_CpyCpb.Click += new System.EventHandler(this.btn_CpyCpb_Click);
             // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.lbl_throttle_curve1);
-            this.panel19.Controls.Add(this.label26);
-            this.panel19.Location = new System.Drawing.Point(5, 145);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(238, 39);
-            this.panel19.TabIndex = 9;
-            // 
-            // lbl_throttle_curve1
-            // 
-            this.lbl_throttle_curve1.AutoSize = true;
-            this.lbl_throttle_curve1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbl_throttle_curve1.Location = new System.Drawing.Point(11, 13);
-            this.lbl_throttle_curve1.Name = "lbl_throttle_curve1";
-            this.lbl_throttle_curve1.Size = new System.Drawing.Size(136, 13);
-            this.lbl_throttle_curve1.TabIndex = 1;
-            this.lbl_throttle_curve1.Text = "---=---=---=---=---=---=---=---=---";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(0, -1);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(74, 13);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Throttle Curve";
-            // 
-            // lbl_famx
-            // 
-            this.lbl_famx.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_famx.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbl_famx.Location = new System.Drawing.Point(10, 97);
-            this.lbl_famx.Name = "lbl_famx";
-            this.lbl_famx.Size = new System.Drawing.Size(88, 15);
-            this.lbl_famx.TabIndex = 20;
-            this.lbl_famx.Text = "---";
-            this.lbl_famx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(7, 82);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(88, 15);
-            this.label22.TabIndex = 19;
-            this.label22.Text = "CG Adjustment";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lbl_rc_smoothing1
-            // 
-            this.lbl_rc_smoothing1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rc_smoothing1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lbl_rc_smoothing1.Location = new System.Drawing.Point(135, 97);
-            this.lbl_rc_smoothing1.Name = "lbl_rc_smoothing1";
-            this.lbl_rc_smoothing1.Size = new System.Drawing.Size(88, 15);
-            this.lbl_rc_smoothing1.TabIndex = 22;
-            this.lbl_rc_smoothing1.Text = "---";
-            this.lbl_rc_smoothing1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label32
-            // 
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(135, 82);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(88, 15);
-            this.label32.TabIndex = 21;
-            this.label32.Text = "RC Smoothing";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // fm_RF1BBE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3046,6 +3146,8 @@
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            this.panel19.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel13.ResumeLayout(false);
@@ -3069,10 +3171,10 @@
             this.panel17.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             this.panel23.ResumeLayout(false);
@@ -3096,10 +3198,10 @@
             this.panel35.PerformLayout();
             this.panel36.ResumeLayout(false);
             this.panel36.PerformLayout();
-            this.panel37.ResumeLayout(false);
-            this.panel37.PerformLayout();
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
             this.panel39.ResumeLayout(false);
             this.panel39.PerformLayout();
             this.panel40.ResumeLayout(false);
@@ -3118,8 +3220,6 @@
             this.panel49.ResumeLayout(false);
             this.panel50.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3222,9 +3322,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label lbl_yaw_wc2;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Label lbl_throttle_curve2;
-        private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel22;
@@ -3300,9 +3397,6 @@
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.Label lbl_yaw_wc3;
         private System.Windows.Forms.Label label100;
-        private System.Windows.Forms.Panel panel37;
-        private System.Windows.Forms.Label lbl_throttle_curve3;
-        private System.Windows.Forms.Label label102;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.Panel panel39;
@@ -3373,10 +3467,24 @@
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Label lbl_throttle_curve1;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label lbl_famx;
+        private System.Windows.Forms.Label lbl_famx1;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label lbl_rc_smoothing1;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label lbl_rc_smoothing2;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label lbl_famx2;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Label lbl_throttle_curve2;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label lbl_rc_smoothing3;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label lbl_famx3;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.Label lbl_throttle_curve3;
+        private System.Windows.Forms.Label label102;
     }
 }
 
